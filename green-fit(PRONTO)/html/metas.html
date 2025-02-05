@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atualização de Metas</title>
+
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+
+<body>
+    <div class="topo">
+        <div class="logo">
+            green fit
+        </div>
+
+        <div class="navbar">
+            <span class="navlinks"><a href="index.php?pagina=home">Início</a></span>
+            <span class="navlinks"><a href="index.php?pagina=metas">Metas</a></span>
+            <span class="navlinks"><a href="index.php?pagina=imc">TMB IMC</a></span>
+            <span class="navlinks"><a href="index.php?pagina=treinos">Treinos</a></span>
+            <span class="navlinks"><a href="index.php?pagina=receitas">Receitas</a></span>
+            <span class="navlinks"><a href="index.php?pagina=perfil">Perfil</a></span>
+            <span class="material-symbols-rounded size-20">person</span>    
+        </div>
+    </div>
+
+    <main>
+        <div class="metas">
+            <h1>Atualização de Metas</h1>
+
+
+            <div class="wrapper1">
+                    <h3>Diferença do último registro</h3>
+                    <table>
+                        <tr>
+                            <td>Peso (kg): </td>
+                                <td>
+                                    <div class="w1-result-peso"></div>
+                                </td>
+                        </tr>
+                        <tr>
+                            <td>Braço (cm):</td>
+                            <td>
+                                <div class="w1-result-braco"></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Cintura (cm):</td>
+                            <td>
+                                <div class="w1-result-cintura"></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Perna (cm):</td>
+                            <td>
+                                <div class="w1-result-perna"></div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+            <form action="" method="post">
+                <div class="wrapper2">
+                    <div class="w2-labels">
+                        <label for="data_atual">Data: </label>
+                    </div>
+                    <input type="date" name="data_atual" id="data_atual">
+
+                    <div class="w2-labels">
+                        <label for="peso_atual">Peso: (kg): </label>
+                    </div>
+                    <input type="number" name="peso_atual" id="peso_atual">
+
+                    <div class="w2-labels">
+                        <label for="braco_atual">Braço (cm): </label>
+                    </div>
+                    <input type="number" name="braco_atual" id="braco_atual">
+
+                    <div class="w2-labels">
+                        <label for="cintura_atual">Cintura (cm): </label>
+                    </div>
+                    <input type="number" name="cintura_atual" id="cintura_atual">
+
+                    <div class="w2-labels">
+                        <label for="perna_atual">Perna (cm): </label>
+                    </div>
+                    <input type="number" name="perna_atual" id="perna_atual">
+
+                    <div class="btn-enviar">
+                        <input type="submit" value="Enviar">
+                    </div>
+                </div>
+            </form>
+
+            <!--<form action="" method="get">
+                <div class="wrapper3">
+                    <h3>Anteriores</h3>
+
+                    <table>
+                        <tr>
+                            <td>Data: </td>
+                            <td> 
+                                <div class="w3-result"></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Peso (kg): </td>
+                            <td> 
+                                <div class="w3-result-peso"></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Braço (cm):</td>
+                            <td> 
+                                <div class="w3-result-braco"></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Cintura (cm):</td>
+                            <td> 
+                                <div class="w3-result-cintura"></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Perna (cm):</td>
+                            <td> 
+                                <div class="w3-result-perna"></div>
+                            </td>
+                    </table>
+                </div>
+            </form>
+
+        </div>-->
+
+    </main>
+
+    <footer class="contato">
+        <span><a href="#"><u>n</u></a></a> (12) 3456-7890</span>
+        <span><a href="#"><u>c</u></a></span>
+        <span><a href="#"><u>f</u></a></span>
+        <span><a href="#"><u>i</u></a></span>
+        <span><a href="#"><u>t</u></a></span>
+    </footer>
+
+    <script src="js/metas.js"></script>
+</body>
+</html>

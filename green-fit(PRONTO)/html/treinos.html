@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treinos</title>
+
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+
+<body>
+    <div class="topo">
+        <div class="logo">
+            green fit
+        </div>
+
+        <div class="navbar">
+            <span class="navlinks"><a href="index.php?pagina=home">Início</a></span>
+            <span class="navlinks"><a href="index.php?pagina=metas">Metas</a></span>
+            <span class="navlinks"><a href="index.php?pagina=imc">TMB IMC</a></span>
+            <span class="navlinks"><a href="index.php?pagina=treinos">Treinos</a></span>
+            <span class="navlinks"><a href="index.php?pagina=receitas">Receitas</a></span>
+            <span class="navlinks"><a href="index.php?pagina=perfil">Perfil</a></span>
+            <span class="material-symbols-rounded size-20">person</span>    
+        </div>
+    </div>
+
+    <main>
+        <div class="treinos">
+            <h1>Treinos</h1>
+
+            <div class="selecionar-treino">
+                <label for="g_muscular">Grupo muscular: </label>
+                <select name="g_muscular" id="g_muscular">
+                    <option value="0" selected disabled>Selecione</option>
+                    <option value="1">Bíceps</option>
+                    <option value="2">Tríceps</option>
+                    <option value="3">Ombros</option>
+                    <option value="4">Abdomen</option>
+                    <option value="5">Glúteos</option>
+                </select>
+            </div>
+
+            <div class="treino-escolhido">
+
+            </div>
+        </div>
+    </main>
+
+    <footer class="contato">
+        <span><a href="#"><u>n</u></a></a> (12) 3456-7890</span>
+        <span><a href="#"><u>c</u></a></span>
+        <span><a href="#"><u>f</u></a></span>
+        <span><a href="#"><u>i</u></a></span>
+        <span><a href="#"><u>t</u></a></span>
+    </footer>
+
+    <script src="js/treinos.js"></script>
+</body>
+</html>

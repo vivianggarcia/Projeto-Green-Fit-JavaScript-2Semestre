@@ -1,0 +1,58 @@
+{
+    "teste@gmail.com": [
+        {
+            "data": "2024-11-18",
+            "peso": "44",
+            "braco": "11",
+            "cintura": "11",
+            "perna": "11"
+        },
+        {
+            "data": "2024-11-20",
+            "peso": "88",
+            "braco": "44",
+            "cintura": "99",
+            "perna": "55"
+        }
+    ],
+    "admin@gmail.com": [
+        {
+            "data": "2024-11-13",
+            "peso": "55",
+            "braco": "22",
+            "cintura": "77",
+            "perna": "44"
+        },
+        {
+            "data": "2024-11-17",
+            "peso": "66",
+            "braco": "33",
+            "cintura": "88",
+            "perna": "55"
+        }
+    ],
+    "3": {
+        "altura": null,
+        "peso": null,
+        "cintura": null,
+        "braco": null,
+        "perna": null,
+        "data": "2024-11-18"
+    },
+    "gio@gmail.com": [
+        {
+            "data": "2024-11-16",
+            "peso": "77",
+            "braco": "35",
+            "cintura": "90",
+            "perna": "65"
+        },
+        {
+            "data": "2024-11-17",
+            "peso": "76",
+            "braco": "34",
+            "cintura": "90",
+            "perna": "65"
+        }
+    ]
+}

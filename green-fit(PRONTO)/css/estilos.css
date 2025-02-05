@@ -1,0 +1,679 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Jost:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=UnifrakturCook:wght@700&family=UnifrakturMaguntia&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto+Slab:wght@100..900&display=swap');
+
+@font-face {
+    font-family: 'Social Media';
+    src: url('https://cdn.jsdelivr.net/gh/giozsett/FONTS@main/TypeIcons-rXq8.ttf')
+}
+
+span.size-20 {
+  font-variation-settings:
+  'FILL' 1,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24;
+  color: #3bd5da;
+  font-size: 30px;
+border-radius: 100%;
+  outline: 2px solid #3bd5da;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+    background: url('../imagens/img1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.topo {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.logo {
+    margin: 15px 30px;
+    text-transform: uppercase;
+    font-family: 'Anton';
+    font-size: 55px;
+    color: #3bd5da;
+}
+
+.navbar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+    height: 50px;
+    border-radius: 50px;
+    background-color: rgba(59, 59, 59, 0.85);
+    margin: 25px 0px;
+}
+
+.navlinks {
+    padding: 8px 10px;
+    margin: 0px 10px;
+    font-family: 'Anton';
+    font-size: 24px;
+    border-radius: 50px;
+    transition: all 0.4s linear;
+}
+
+.navlinks:hover {
+    background: radial-gradient(circle, rgba(39,115,117,1) 0%, rgba(46,158,162,1) 58%, rgba(59,213,218, 0.8) 100%);
+    outline: 1px solid rgb(13, 56, 58);
+    outline-offset: -3px;
+}
+
+.navlinks a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.contato {
+    background-color: rgb(35, 113, 116);
+    width: 98%;
+    height: 26px;
+    border-radius: 10px;
+    padding: 2px 5px;
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+    font-family: 'Open Sans';
+}
+
+.contato u {
+    text-decoration: none;
+    font-family: 'Social Media';
+    font-size: 20px;
+}
+
+.contato a {
+    text-decoration: none;
+    color: #000;
+}
+
+.contato span {
+    padding: 0px 6px;
+}
+
+
+
+/* HOME */
+main {
+    width: 100%;
+    margin: 10px 40px 40px 40px;
+    border-radius: 10px;
+    background-color: rgba(46, 46, 46, 0.95);
+    padding: 20px 30px;
+    -webkit-box-shadow: 4px 4px 8px 0px rgb(35, 113, 116, 0.55);
+    -moz-box-shadow: 4px 4px 8px 0px rgb(35, 113, 116, 0.55);
+    box-shadow: 4px 4px 8px 0px rgb(35, 113, 116, 0.55);
+    border: 1px solid #289094;
+}
+
+main h1 {
+    width: 100%;
+    text-align: center;
+    font-family: 'Anton';
+    letter-spacing: 2px;
+    margin-bottom: 40px;
+    color: #fff;
+}
+
+main h2 {
+    width: 100%;
+    text-align: justify;
+    margin: 20px 0px;
+    font-family: 'Jost';
+    color: #f5f5f5;
+    font-size: 24px;
+}
+
+main h3 {
+    width: 100%;
+    text-align: center;
+    font-family: 'Jost';
+    font-weight: bold;
+    color: #f5f5f5;
+    font-size: 22px;
+}
+
+article {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.texto {
+    width: 70%;
+}
+
+.texto p {
+    text-align: justify;
+    margin: 0px 0px 0px 15px;
+    font-family: 'Open Sans';
+    color: #f5f5f5;
+    font-size: 16px;
+}
+
+.imagem {
+    margin: 15px 0px 10px 0px;
+    width: 25%;
+}
+
+.imagem img {
+    background-size: cover;
+    width: 300px;
+    height: 200px;
+    border-radius: 25px;
+}
+
+
+
+/* ATUALIZAÇÃO DE METAS */
+.metas {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-around;
+    width: 100%;
+    font-family: 'Open Sans';
+    color: #fff;
+}
+
+.metas h1 {
+    width: 100%;
+    text-align: center;
+    font-family: 'Anton';
+    letter-spacing: 2px;
+    margin-bottom: 40px;
+}
+
+.wrapper1 {
+    width: 270px;
+    background-color: rgb(59, 213, 218, 0.25);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.wrapper1 h3 {
+    font-size: 20px;
+    width: inherit;
+    text-align: center;
+    font-family: 'Jost';
+}
+
+.wrapper1 td {
+    height: 40px;
+    padding: 5px;
+}
+
+.w1-result {
+    width: 50px;
+    height: 30px;
+    border-radius: 25px;
+    background-color: rgba(238, 238, 238, 0.8);
+    padding: 5px;
+}
+
+.w1-result-peso {
+    font-size: 15px;
+    width: 50px;
+    height: 30px;
+    border-radius: 25px;
+    background-color: rgba(238, 238, 238, 0.8);
+    padding: 5px 15px;
+    color: #000;
+}
+
+.w1-result-braco {
+    font-size: 15px;
+    width: 50px;
+    height: 30px;
+    border-radius: 25px;
+    background-color: rgba(238, 238, 238, 0.8);
+    padding: 5px 15px;
+    color: #000;
+}
+
+.w1-result-cintura {
+    font-size: 15px;
+    width: 50px;
+    height: 30px;
+    border-radius: 25px;
+    background-color: rgba(238, 238, 238, 0.8);
+    padding: 5px 15px;
+    color: #000;
+}
+
+.w1-result-perna {
+    font-size: 15px;
+    width: 50px;
+    height: 30px;
+    border-radius: 25px;
+    background-color: rgba(238, 238, 238, 0.8);
+    padding: 5px 15px;
+    color: #000;
+}
+
+.wrapper2 {
+    width: 350px;
+    background-color: rgba(221, 243, 244, 0.4);
+    padding: 20px;
+    border-radius: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.w2-labels {
+    width: inherit;
+}
+
+.wrapper2 input[type="number"] {
+    width: 200px;
+    height: 30px;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 15px;
+    border-style: none;
+    margin: 5px 0px 10px;
+}
+
+.wrapper2 input[type="date"] {
+    width: 140px;
+    height: 30px;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 15px;
+    border-style: none;
+    margin: 0px 0px 10px 0px;
+}
+
+.wrapper3 {
+    width: 250px;
+    background-color: rgb(118, 217, 209, 0.25);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.wrapper3 h3 {
+    font-size: 20px;
+    width: inherit;
+    text-align: center;
+    font-family: 'Jost';
+}
+
+.wrapper3 td {
+    height: 40px;
+    padding: 5px;
+}
+
+.w3-result {
+    font-size: 13px;
+    font-weight: bold;
+    text-align: center;
+    padding: 4px;
+    width: 90px;
+    height: 30px;
+    border-radius: 25px;
+    background-color: rgba(238, 238, 238, 0.5);
+    color: #000;
+}
+
+.w3-result-peso {
+    font-size: 15px;
+    width: 50px;
+    height: 30px;
+    border-radius: 25px;
+    background-color: rgba(238, 238, 238, 0.8);
+    padding: 5px 15px;
+    color: #000;
+}
+
+.w3-result-braco {
+    font-size: 15px;
+    width: 50px;
+    height: 30px;
+    border-radius: 25px;
+    background-color: rgba(238, 238, 238, 0.8);
+    padding: 5px 15px;
+    color: #000;
+}
+
+.w3-result-cintura {
+    font-size: 15px;
+    width: 50px;
+    height: 30px;
+    border-radius: 25px;
+    background-color: rgba(238, 238, 238, 0.8);
+    padding: 5px 15px;
+    color: #000;
+}
+
+.w3-result-perna {
+    font-size: 15px;
+    width: 50px;
+    height: 30px;
+    border-radius: 25px;
+    background-color: rgba(238, 238, 238, 0.8);
+    padding: 5px 15px;
+    color: #000;
+}
+
+.btn-enviar {
+    width: inherit;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+    padding: 5px;
+}
+
+.btn-enviar input[type="submit"] {
+    padding: 10px 15px;
+    transition: all 0.4s linear;
+    border-radius: 10px;
+    border-style: none;
+    box-shadow: 2px 2px rgb(0, 0, 0, 0.6);
+    font-family: 'Jost';
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.btn-enviar input[type="submit"]:hover {
+    padding: 12px 18px;
+    box-shadow: 3px 3px rgb(0, 0, 0, 0.6);
+    background: radial-gradient(circle, rgba(59,213,218,1) 0%, rgba(54,168,172,1) 35%, rgba(31,100,114,1) 100%);
+    cursor: pointer;
+}
+
+
+
+/* CÁLCULO DO IMC E TMB*/
+.imc-tmb {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-around;
+    width: 100%;
+    font-family: 'Open Sans';
+    color: #fff;
+}
+
+.imc-tmb h1 {
+    width: 100%;
+    text-align: center;
+    font-family: 'Anton';
+    letter-spacing: 2px;
+    margin-bottom: 40px;
+}
+
+.dados-calculo {
+    width: 400px;
+    background-color: rgba(221, 243, 244, 0.4);
+    padding: 20px;
+    border-radius: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.dados-calculo label {
+    width: inherit;
+}
+
+.dados-calculo select {
+    width: 150px;
+    height: 30px;
+    padding: 5px;
+    font-size: 16px;
+    border-radius: 15px;
+    border-style: none;
+    margin: 0px 0px 10px 0px;
+}
+
+.dados-calculo input[type="number"] {
+    width: 200px;
+    height: 30px;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 15px;
+    border-style: none;
+    margin: 5px 0px 10px;
+}
+
+.btn-calcular {
+    width: inherit;
+    display: flex;
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+}
+
+.btn-calcular input[type="button"] {
+    margin-top: 25px;
+    padding: 10px 15px;
+    transition: all 0.4s linear;
+    border-radius: 10px;
+    border-style: none;
+    box-shadow: 2px 2px rgb(0, 0, 0, 0.6);
+    font-family: 'Jost';
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.btn-calcular input[type="button"]:hover {
+    padding: 12px 18px;
+    box-shadow: 3px 3px rgb(0, 0, 0, 0.6);
+    background: radial-gradient(circle, rgba(59,213,218,1) 0%, rgba(54,168,172,1) 35%, rgba(31,100,114,1) 100%);
+    cursor: pointer;
+}
+
+
+
+
+/* TREINOS*/
+.treinos {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-around;
+    width: 100%;
+    font-family: 'Open Sans';
+    color: #fff;
+}
+
+.treinos h1 {
+    width: 100%;
+    text-align: center;
+    font-family: 'Anton';
+    letter-spacing: 2px;
+    margin-bottom: 40px;
+}
+
+.selecionar-treino {
+    width: inherit;
+    font-family: 'Jost';
+    font-size: 24px;
+    padding: 10px;
+    margin: 0px 40px;
+}
+
+.selecionar-treino select {
+    width: 150px;
+    height: 30px;
+    padding: 5px;
+    font-size: 16px;
+    border-radius: 15px;
+    border-style: none;
+    margin: 0px 10px 00px 10px;
+}
+
+.treino-escolhido {
+    margin: 25px 10px 15px 10px;
+}
+
+
+
+/* RECEITAS*/
+.receitas {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-around;
+    width: 100%;
+    font-family: 'Open Sans';
+    color: #fff;
+}
+
+.receitas h1 {
+    width: 100%;
+    text-align: center;
+    font-family: 'Anton';
+    letter-spacing: 2px;
+    margin-bottom: 40px;
+}
+
+.seleciona-receita {
+    width: inherit;
+    font-family: 'Jost';
+    font-size: 24px;
+    padding: 10px;
+    margin: 0px 40px;
+}
+
+.seleciona-receita select {
+    width: 150px;
+    height: 30px;
+    padding: 5px;
+    font-size: 16px;
+    border-radius: 15px;
+    border-style: none;
+    margin: 0px 10px 00px 10px;
+}
+
+.refeicao-escolhida {
+    margin: 25px 10px 15px 10px;
+}
+
+
+
+/* PERFIL*/
+.perfil-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+
+.perfil-menu {
+    width: 220px;
+    padding: 10px;
+    font-family: 'Jost';
+    background: -webkit-radial-gradient(circle, #30acb0 0%, #278699 100%);
+    background: radial-gradient(circle, #30acb0 0%, #278699 100%);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.perfil-menu span {
+    padding: 5px;
+    border-bottom: 1px solid #fff;
+    margin: 0px 10px 10px 10px;
+    outline: 1px solid transparent;
+    transition: all 0.4s linear;
+    text-align: center;
+}
+
+.perfil-menu span:hover {
+    background-color: rgb(59, 213, 218, 0.4);
+    outline: 1px solid rgb(89, 213, 218);
+    border-radius: 5px;
+}
+
+.perfil-menu a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 22px;
+}
+
+.op-escolhida {
+    width: 80%;
+}
+
+/*PERFIL --> EDITAR CADASTRO*/
+.editar-cadastro {
+    padding: 20px 10px;
+}
+
+.editar-cadastro label {
+    font-family: 'Open Sans';
+    color: #fff;
+    margin: 0px 0px 0px 15px;
+}
+
+.editar-cadastro input {
+    width: 200px;
+    height: 30px;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 15px;
+    border-style: none;
+    margin: 5px 0px 10px;
+}
+
+.btn-confirmar {
+    width: inherit;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 10px 0px;
+}
+
+.btn-confirmar input[type="submit"] {
+    height: 40px;
+    margin-top: 25px;
+    padding: 5px 15px;
+    transition: all 0.4s linear;
+    border-radius: 10px;
+    border-style: none;
+    box-shadow: 2px 2px rgb(0, 0, 0, 0.6);
+    font-family: 'Jost';
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.btn-confirmar input[type="submit"]:hover {
+    padding: 7px 18px;
+    box-shadow: 3px 3px rgb(0, 0, 0, 0.6);
+    background: radial-gradient(circle, rgba(59,213,218,1) 0%, rgba(54,168,172,1) 35%, rgba(31,100,114,1) 100%);
+    cursor: pointer;
+}
+
+
+/*PERFIL --> MINHA DIETA*/
+.perfil-texto {
+    font-family: 'Open Sans';
+    color: #eee;
+    text-align: justify;
+    margin: 20px 10px 10px 10px;
+}

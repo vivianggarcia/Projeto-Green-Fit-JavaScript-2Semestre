@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TMB IMC</title>
+
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+
+<body>
+    <div class="topo">
+        <div class="logo">
+            green fit
+        </div>
+
+        <div class="navbar">
+            <span class="navlinks"><a href="index.php?pagina=home">Início</a></span>
+            <span class="navlinks"><a href="index.php?pagina=metas">Metas</a></span>
+            <span class="navlinks"><a href="index.php?pagina=imc">TMB IMC</a></span>
+            <span class="navlinks"><a href="index.php?pagina=treinos">Treinos</a></span>
+            <span class="navlinks"><a href="index.php?pagina=receitas">Receitas</a></span>
+            <span class="navlinks"><a href="index.php?pagina=perfil">Perfil</a></span>
+            <span class="material-symbols-rounded size-20">person</span>    
+        </div>
+    </div>
+
+    <main>
+        <div class="imc-tmb">
+            <h1>Cálculo do IMC e TMB</h1>
+
+            <form action="" id="calcForm">
+                <div class="dados-calculo">
+                    <label for="sexo">Sexo: </label>
+                    <select name="sexo" id="sexo">
+                        <option value="0" disabled selected>Selecione</option>
+                        <option value="1">Feminino</option>
+                        <option value="2">Masculino</option>
+                    </select>
+
+                    <label for="idade">Idade: </label>
+                    <input type="number" name="idade" id="idade">
+
+                    <label for="altura">Altura (cm): </label>
+                    <input type="number" name="altura" id="altura">
+
+                    <label for="peso">Peso (kg): </label>
+                    <input type="number" name="peso" id="peso">
+
+                    <div class="btn-calcular">
+                        <input type="button" value="Calcular" onclick="calcularIMC_TMB()">
+                    </div>
+
+                    <div id="resultado">
+                        <p id="imcResultado"></p>
+                        <p id="tmbResultado"></p>
+                    </div>
+                </div>
+            </form>
+
+        
+        </div>
+    </main>
+
+    <footer class="contato">
+        <span><a href="#"><u>n</u></a> (12) 3456-7890</span>
+        <span><a href="#"><u>c</u></a></span>
+        <span><a href="#"><u>f</u></a></span>
+        <span><a href="#"><u>i</u></a></span>
+        <span><a href="#"><u>t</u></a></span>
+    </footer>
+
+    <script>
+        function calcularIMC_TMB() {
+            const sexo = document.getElementById('sexo').value;
+            const idade = document.getElementById('idade').value;
+            const altura = document.getElementById('altura').value;
+            const peso = document.getElementById('peso').value;
+
+            // Validar dados de entrada
+            if (!sexo || !idade || !altura || !peso) {
+                alert("Por favor, preencha todos os campos.");
+                return;
+            }
+
+            // Calcular IMC
+            let alturaMetros = altura / 100; // converter altura para metros
+            let imc = peso / (alturaMetros * alturaMetros);
+
+            // Calcular TMB (considerando fórmula de Harris-Benedict)
+            let tmb;
+            if (sexo == 1) { // Feminino
+                tmb = 655 + (9.6 * peso) + (1.8 * altura) - (4.7 * idade);
+            } else if (sexo == 2) { // Masculino
+                tmb = 66 + (13.7 * peso) + (5 * altura) - (6.8 * idade);
+            }
+
+            // Exibir IMC e TMB
+            document.getElementById('imcResultado').innerText = `Seu IMC é: ${imc.toFixed(2)}`;
+            document.getElementById('tmbResultado').innerText = `Sua TMB é: ${tmb.toFixed(2)} kcal/dia`;
+
+            // Armazenar os resultados na tabela
+            const tabela = document.getElementById('tabelaIMC').getElementsByTagName('tbody')[0];
+
+            // Criar uma nova linha
+            const novaLinha = tabela.insertRow();
+
+            // Inserir células e dados na nova linha
+            novaLinha.insertCell(0).innerText = sexo == 1 ? "Feminino" : "Masculino";
+            novaLinha.insertCell(1).innerText = idade;
+            novaLinha.insertCell(2).innerText = altura;
+            novaLinha.insertCell(3).innerText = peso;
+            novaLinha.insertCell(4).innerText = imc.toFixed(2);
+            novaLinha.insertCell(5).innerText = tmb.toFixed(2);
+
+            // Armazenar os valores no localStorage
+            const resultados = JSON.parse(localStorage.getItem('resultados')) || [];
+            resultados.push({
+                sexo: sexo == 1 ? "Feminino" : "Masculino",
+                idade: idade,
+                altura: altura,
+                peso: peso,
+                imc: imc.toFixed(2),
+                tmb: tmb.toFixed(2)
+            });
+
+            localStorage.setItem('resultados', JSON.stringify(resultados));
+        }
+    </script>
+</body>
+</html>

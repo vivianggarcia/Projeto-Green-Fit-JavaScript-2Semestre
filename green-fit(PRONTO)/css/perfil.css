@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Jost:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=UnifrakturCook:wght@700&family=UnifrakturMaguntia&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto+Slab:wght@100..900&display=swap');
+
+@font-face {
+    font-family: 'Social Media';
+    src: url('https://cdn.jsdelivr.net/gh/giozsett/FONTS@main/TypeIcons-rXq8.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Cutout3d';
+  src: url('https://cdn.jsdelivr.net/gh/giozsett/FONTS@main/CutOutsFor3DFx-A4Y6.ttf') format('truetype');
+}
+
+span.size-20 {
+  font-variation-settings:
+  'FILL' 1,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24;
+  color: #3bd5da;
+  font-size: 30px;
+border-radius: 100%;
+  outline: 2px solid #3bd5da;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+h1 {
+  width: 100%;
+  margin: 10px 40px;
+  font-family: 'Jost';
+  font-weight: bold;
+  color: #5ddada;
+  font-size: 24px;
+}
+
+h2 {
+  width: 100%;
+  margin: 10px 40px;
+  font-family: 'Jost';
+  font-weight: bold;
+  color: #5ddada;
+  font-size: 24px;
+  margin: 20px 0px 0px 30px;
+}
+
+
+h3 {
+  font-family: 'Jost';
+  font-size: 18px;
+  color: #eee;
+  margin: 10px 0px 0px 30px;
+}
+
+.container {
+  width: 90%;
+}
+
+.resultado {
+  font-family: 'Open Sans';
+  color: #fff;
+  margin: 0px 10px;
+  font-size: 15px;
+}
+
+b {
+  color: #9cf1f1;
+  font-size: 17px;
+}
+
+p {
+  font-family: 'Open Sans';
+  color: #eee;
+  margin: 0px 0px 0px 15px;
+}
+
+table {
+  color: #fff;
+  font-family: 'Open Sans';
+}
+
+th {
+  color:#319e9e;
+}
+
+#calcularBtn {
+  margin: 20px 25px;
+  padding: 7px;
+  transition: all 0.4s linear;
+  border-radius: 10px;
+  border-style: none;
+  box-shadow: 2px 2px rgb(0, 0, 0, 0.6);
+  font-family: 'Jost';
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#calcularBtn:hover {
+  padding: 10px;
+  box-shadow: 3px 3px rgb(0, 0, 0, 0.6);
+  background: radial-gradient(circle, rgba(59,213,218,1) 0%, rgba(54,168,172,1) 35%, rgba(31,100,114,1) 100%);
+  cursor: pointer;
+}
+
+.button-favorite {
+  margin: 3px 20px;
+  padding: 2px 3px;
+  border-radius: 5px;
+  border-style: none;
+  font-family: 'Cutout3d';
+  font-size: 24px;
+  color: #9e0000;
+  transition: all 0.4s linear;
+}
+
+.button-favorite:hover {
+  background: radial-gradient(circle, rgba(251,63,63,1) 0%, rgba(166,0,0,1) 100%);
+  color: #fff;
+  padding: 3px 4px;
+  cursor: pointer;
+}
+
+#favoriteList {
+  font-family: 'Open Sans';
+  color: #eee;
+  margin: 0px 0px 0px 15px;
+}
+
+.treinos-container {
+  width: 90%;
+}
+
+
+.editar-cadastro {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0px 40px;
+}
+
+.editar-cadastro label {
+  font-family: 'Open Sans';
+  color: #fff;
+  margin: 0px 0px 0px 15px;
+}
+
+.editar-cadastro input {
+  width: 200px;
+  height: 30px;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 15px;
+  border-style: none;
+  margin: 5px 0px 10px;
+}
+
+td {
+  padding: 2px 5px;
+}
+
+.msgErro {
+  font-family: 'Open Sans';
+  font-weight: bold;
+  color: #fff;
+  margin-top: 5px;
+  margin-left: 20px;
+}
+
+.btn-confirmar {
+  width: inherit;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 10px 0px;
+}
+
+.btn-confirmar input[type="submit"] {
+  height: 40px;
+  margin-top: 25px;
+  padding: 5px 15px;
+  transition: all 0.4s linear;
+  border-radius: 10px;
+  border-style: none;
+  box-shadow: 2px 2px rgb(0, 0, 0, 0.6);
+  font-family: 'Jost';
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.btn-confirmar input[type="submit"]:hover {
+  padding: 7px 18px;
+  box-shadow: 3px 3px rgb(0, 0, 0, 0.6);
+  background: radial-gradient(circle, rgba(59,213,218,1) 0%, rgba(54,168,172,1) 35%, rgba(31,100,114,1) 100%);
+  cursor: pointer;
+}
+
+
+/*PERFIL --> MINHA DIETA*/
+.perfil-texto {
+  font-family: 'Open Sans';
+  color: #eee;
+  text-align: justify;
+  margin: 20px 10px 10px 10px;
+}

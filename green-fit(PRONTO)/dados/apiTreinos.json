@@ -1,0 +1,27 @@
+[    
+    { "id": "1", "muscleGroupId": "1", "nome": "Rosca Direta", "descricao": "Exercício para bíceps", "duracao": "30 min" },
+    { "id": "2", "muscleGroupId": "1", "nome": "Rosca Martelo", "descricao": "Exercício para bíceps", "duracao": "25 min" },
+    { "id": "3", "muscleGroupId": "1", "nome": "Rosca Concentrada", "descricao": "Exercício para bíceps", "duracao": "20 min" },
+
+    { "id": "4", "muscleGroupId": "2", "nome": "Tríceps Corda", "descricao": "Exercício para tríceps", "duracao": "20 min" },
+    { "id": "5", "muscleGroupId": "2", "nome": "Tríceps Testa", "descricao": "Exercício para tríceps", "duracao": "25 min" },
+    { "id": "6", "muscleGroupId": "2", "nome": "Tríceps Supino Fechado", "descricao": "Exercício para tríceps", "duracao": "30 min" },
+
+    { "id": "7", "muscleGroupId": "3", "nome": "Elevação Lateral", "descricao": "Exercício para ombro", "duracao": "25 min" },
+    { "id": "8", "muscleGroupId": "3", "nome": "Desenvolvimento com Halteres", "descricao": "Exercício para ombro", "duracao": "30 min" },
+    { "id": "9", "muscleGroupId": "3", "nome": "Desenvolvimento Militar", "descricao": "Exercício para ombro", "duracao": "20 min" },
+
+    { "id": "10", "muscleGroupId": "4", "nome": "Abdominal Supra", "descricao": "Exercício para abdômen", "duracao": "15 min" },
+    { "id": "11", "muscleGroupId": "4", "nome": "Abdominal Infra", "descricao": "Exercício para abdômen", "duracao": "20 min" },
+    { "id": "12", "muscleGroupId": "4", "nome": "Prancha", "descricao": "Exercício para abdômen", "duracao": "10 min" },
+
+    { "id": "13", "muscleGroupId": "5", "nome": "Agachamento Livre", "descricao": "Exercício para glúteo", "duracao": "30 min" },
+    { "id": "14", "muscleGroupId": "5", "nome": "Avanço com Halteres", "descricao": "Exercício para glúteo", "duracao": "25 min" },
+    { "id": "15", "muscleGroupId": "5", "nome": "Cadeira Abdutora", "descricao": "Exercício para glúteo", "duracao": "20 min" },
+
+    { "id": "16", "muscleGroupId": "1", "nome": "Crossover para Bíceps", "descricao": "Exercício para bíceps", "duracao": "15 min" },
+    { "id": "17", "muscleGroupId": "3", "nome": "Crucifixo Invertido", "descricao": "Exercício para ombro posterior", "duracao": "25 min" },
+    { "id": "18", "muscleGroupId": "2", "nome": "Mergulho no Banco", "descricao": "Exercício para tríceps", "duracao": "20 min" },
+    { "id": "19", "muscleGroupId": "4", "nome": "Abdominal Oblíquo", "descricao": "Exercício para abdômen", "duracao": "15 min" },
+    { "id": "20", "muscleGroupId": "5", "nome": "Elevação Pélvica", "descricao": "Exercício para glúteo", "duracao": "20 min" }
+]

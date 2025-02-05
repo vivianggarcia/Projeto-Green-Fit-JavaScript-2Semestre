@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alterar cadastro</title>
+
+    <link rel="stylesheet" href="../css/perfil.css">
+</head>
+
+<body>
+        <h1>Editar informações de cadastro</h1>
+
+        <div class="editar-cadastro">
+            <form action="" method="post">
+                <table>
+                    <tr>
+                        <td>
+                            <label for="email">Digite seu email: </label>
+                        </td>
+                        <td>
+                            <input type="email" name="email" id="email">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="senha">Nova senha: </label>
+                        </td>
+                        <td>
+                            <input type="password" name="nova-senha" id="nova-senha">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="senha">Confirme a senha: </label>
+                        </td>
+                        <td>
+                            <input type="password" name="conf-senha" id="conf-senha">
+                        </td>
+                    </tr>
+                </table>
+
+                <div class="msgErro">#msgErro</div>
+
+                <div class="btn-confirmar">
+                    <input type="submit" value="Confirmar">
+                </div>
+            </form>
+        </div>
+</body>
+</html>

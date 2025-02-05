@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil do Usuário</title>
+
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+
+<body>
+    <div class="topo">
+        <div class="logo">
+            green fit
+        </div>
+
+        <div class="navbar">
+            <span class="navlinks"><a href="index.php?pagina=home">Início</a></span>
+            <span class="navlinks"><a href="index.php?pagina=metas">Metas</a></span>
+            <span class="navlinks"><a href="index.php?pagina=imc">TMB IMC</a></span>
+            <span class="navlinks"><a href="index.php?pagina=treinos">Treinos</a></span>
+            <span class="navlinks"><a href="index.php?pagina=receitas">Receitas</a></span>
+            <span class="navlinks"><a href="index.php?pagina=perfil">Perfil</a></span>
+            <span class="material-symbols-rounded size-20">person</span>    
+        </div>
+    </div>
+    
+    <main>
+        <h1>Perfil</h1>
+        <div class="perfil-wrapper">
+            <div class="perfil-menu">
+                <span><a href="php/perfil-alterar.php" target="profile">Editar cadastro</a></span>
+                <span><a href="html/perfil-dieta.html" target="profile">Minha dieta</a></span>
+                <span><a href="html/perfil-treinos.html" target="profile">Meus treinos</a></span>
+                <span><a href="html/perfil-receitas.html" target="profile">Receitas favoritas</a></span>
+                <span><a href="index.php?pagina=deslogar">Sair</a></span>
+            </div>
+    
+            <div class="op-escolhida">
+                <iframe src="php/perfil-alterar.php" frameborder="0" width="100%" height="650px" name="profile" style="border-radius: 15px;">
+                
+                </iframe>
+            </div>
+        </div>
+    </main>
+
+    <footer class="contato">
+        <span><a href="#"><u>n</u></a></a> (12) 3456-7890</span>
+        <span><a href="#"><u>c</u></a></span>
+        <span><a href="#"><u>f</u></a></span>
+        <span><a href="#"><u>i</u></a></span>
+        <span><a href="#"><u>t</u></a></span>
+    </footer>
+</body>
+</html>

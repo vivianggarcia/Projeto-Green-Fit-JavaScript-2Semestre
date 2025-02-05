@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha dieta</title>
+    <link rel="stylesheet" href="../css/perfil.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Dieta Calórica</h1>
+
+        <div class="resultado">
+            <p id="imcResultado">Seu IMC: </p>
+            <p id="tmbResultado">Sua TMB: </p>
+        </div>
+
+        <div class="dieta">
+            <p id="dietaCalorica"></p>
+        </div>
+
+        <button class="button" id="calcularBtn">Calcular Dieta</button>
+
+        <!-- Tabela para armazenar o histórico de IMC e TMB -->
+        <h2>Histórico de Cálculos</h2>
+        <table id="tabelaIMC" border="1">
+            <thead>
+                <tr>
+                    <th>Sexo</th>
+                    <th>Idade</th>
+                    <th>Altura</th>
+                    <th>Peso</th>
+                    <th>IMC</th>
+                    <th>TMB</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Os dados calculados serão inseridos aqui -->
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Recuperar os valores de IMC e TMB do localStorage
+            const imc = parseFloat(localStorage.getItem('imc'));
+            const tmb = parseFloat(localStorage.getItem('tmb'));
+            const resultados = JSON.parse(localStorage.getItem('resultados')) || [];
+
+            const imcResultado = document.getElementById('imcResultado');
+            const tmbResultado = document.getElementById('tmbResultado');
+            const dietaCalorica = document.getElementById('dietaCalorica');
+            const calcularBtn = document.getElementById('calcularBtn');
+            const tabela = document.getElementById('tabelaIMC').getElementsByTagName('tbody')[0];
+
+            // Exibir os valores de IMC e TMB na página (se existirem)
+            if (imc && tmb) {
+                imcResultado.innerHTML = `Seu IMC é: <b>${imc}</b>`;
+                tmbResultado.innerHTML = `Sua TMB é: <b>${tmb} kcal/dia</b>`;
+            }
+
+            // Função para calcular e mostrar a dieta calórica
+            function calcularDieta(tmb, imc) {
+                let caloriasDeManutencao = tmb; // Calorias para manutenção (TMB inicialmente)
+
+                // Ajustar as calorias com base no nível de atividade física
+                let nivelAtividade = prompt("Qual é o seu nível de atividade física? (Escolha 1-5)\n1. Sedentário\n2. Levemente ativo\n3. Moderadamente ativo\n4. Muito ativo\n5. Extremamente ativo");
+
+                switch (nivelAtividade) {
+                    case '1':
+                        caloriasDeManutencao *= 1.2;
+                        break;
+                    case '2':
+                        caloriasDeManutencao *= 1.375;
+                        break;
+                    case '3':
+                        caloriasDeManutencao *= 1.55;
+                        break;
+                    case '4':
+                        caloriasDeManutencao *= 1.725;
+                        break;
+                    case '5':
+                        caloriasDeManutencao *= 1.9;
+                        break;
+                    default:
+                        alert("Escolha inválida. Considerando o nível sedentário.");
+                        caloriasDeManutencao *= 1.2;
+                }
+
+                // Ajustar calorias com base no IMC
+                let recomendacao = "";
+                if (imc < 18.5) {
+                    recomendacao = "Você está abaixo do peso. Recomendamos um aumento de calorias para ganhar peso.";
+                    caloriasDeManutencao *= 1.2; // Ganho de peso
+                } else if (imc >= 18.5 && imc <= 24.9) {
+                    recomendacao = "Você está com o peso ideal. Mantenha sua alimentação equilibrada.";
+                } else if (imc >= 25 && imc <= 29.9) {
+                    recomendacao = "Você está com sobrepeso. Recomendamos reduzir a ingestão calórica.";
+                    caloriasDeManutencao *= 0.8; // Perda de peso
+                } else {
+                    recomendacao = "Você está com obesidade. Recomendamos uma redução significativa das calorias.";
+                    caloriasDeManutencao *= 0.7; // Perda de peso
+                }
+
+                // Definir as calorias para perda ou ganho de peso
+                let caloriasParaPerdaPeso = caloriasDeManutencao - (caloriasDeManutencao * 0.15); // Redução de 15% para perda de peso
+                let caloriasParaGanhoPeso = caloriasDeManutencao + (caloriasDeManutencao * 0.15); // Aumento de 15% para ganho de peso
+
+                // Exibir os resultados na tela
+                dietaCalorica.innerHTML = `
+                    <strong>Recomendação:</strong> ${recomendacao} <br>
+                    <strong>Calorias para manutenção:</strong> ${Math.round(caloriasDeManutencao)} kcal/dia <br>
+                    <strong>Calorias para perda de peso:</strong> ${Math.round(caloriasParaPerdaPeso)} kcal/dia <br>
+                    <strong>Calorias para ganho de peso:</strong> ${Math.round(caloriasParaGanhoPeso)} kcal/dia <br>
+                `;
+            }
+
+            // Função que adiciona um novo cálculo na tabela
+            function adicionarTabela(sexo, idade, altura, peso, imc, tmb) {
+                // Criar uma nova linha na tabela
+                const novaLinha = tabela.insertRow();
+                novaLinha.insertCell(0).innerText = sexo == 1 ? "Feminino" : "Masculino";
+                novaLinha.insertCell(1).innerText = idade;
+                novaLinha.insertCell(2).innerText = altura;
+                novaLinha.insertCell(3).innerText = peso;
+                novaLinha.insertCell(4).innerText = imc.toFixed(2);
+                novaLinha.insertCell(5).innerText = tmb.toFixed(2);
+            }
+
+            // Preencher a tabela com os cálculos armazenados no localStorage
+            resultados.forEach(result => {
+                adicionarTabela(result.sexo == "Feminino" ? 1 : 2, result.idade, result.altura, result.peso, parseFloat(result.imc), parseFloat(result.tmb));
+            });
+
+            // Adiciona os cálculos ao clicar no botão
+            calcularBtn.addEventListener('click', () => {
+                // Pega os dados do formulário (sexo, idade, altura, peso)
+                const sexo = prompt("Digite seu sexo: 1 para Feminino, 2 para Masculino");
+                const idade = prompt("Digite sua idade:");
+                const altura = prompt("Digite sua altura (em cm):");
+                const peso = prompt("Digite seu peso (em kg):");
+
+                // Calcular IMC e TMB
+                const alturaMetros = altura / 100;
+                const imcCalculado = peso / (alturaMetros * alturaMetros);
+                let tmbCalculada;
+
+                if (sexo == 1) {
+                    tmbCalculada = 655 + (9.6 * peso) + (1.8 * altura) - (4.7 * idade);
+                } else if (sexo == 2) {
+                    tmbCalculada = 66 + (13.7 * peso) + (5 * altura) - (6.8 * idade);
+                }
+
+                // Exibir IMC e TMB
+                imcResultado.innerHTML = `Seu IMC é: <b>${imcCalculado.toFixed(2)}</b>`;
+                tmbResultado.innerHTML = `Sua TMB é: <b>${tmbCalculada.toFixed(2)} kcal/dia</b>`;
+
+                // Adicionar os resultados à tabela
+                adicionarTabela(sexo, idade, altura, peso, imcCalculado, tmbCalculada);
+
+                // Armazenar os resultados no localStorage
+                resultados.push({
+                    sexo: sexo == 1 ? "Feminino" : "Masculino",
+                    idade: idade,
+                    altura: altura,
+                    peso: peso,
+                    imc: imcCalculado.toFixed(2),
+                    tmb: tmbCalculada.toFixed(2)
+                });
+
+                localStorage.setItem('resultados', JSON.stringify(resultados));
+
+                // Calcular e mostrar a dieta
+                calcularDieta(tmbCalculada, imcCalculado);
+            });
+        });
+    </script>
+</body>
+</html>

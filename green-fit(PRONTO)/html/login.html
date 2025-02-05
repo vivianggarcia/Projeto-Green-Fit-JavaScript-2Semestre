@@ -1,0 +1,57 @@
+<!-- login.html -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+    <div class="wrapper">
+        <nav class="nav">
+            <div class="nav-logo">
+                <p>green fit</p>
+            </div>
+            <div class="nav-button">
+                <button class="btn white-btn"><a href="index.php?pagina=login">Entrar</a></button>
+                <button class="btn"><a href="index.php?pagina=cadastro">Inscrever-se</a></button>
+            </div>
+        </nav>
+        <div class="form-box">
+            <form id="loginForm" method="post" action="index.php?pagina=login">
+                <div class="login-container" id="login">
+                    <div class="top">
+                        <span>Não tenho uma conta? <a href="index.php?pagina=cadastro">Inscrever-se</a></span>
+                        <header>Login</header>
+                        <p>{{mensagem_erro_login}}</p>
+                    </div>
+                    <div class="input-box">
+                        <input type="text" name="email" class="input-field" placeholder="Email" required>
+                        <i class="bx bx-user"></i>
+                    </div>
+                    <div class="input-box">
+                        <input type="password" name="senha" class="input-field" placeholder="Senha" required>
+                        <i class="bx bx-lock-alt"></i>
+                    </div>
+                    <div class="input-box">
+                        <input type="submit" class="submit" value="Entrar">
+                    </div>
+                    <div id="mensagemErroLogin" style="color: red;"></div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <footer class="contato">
+        <span><a href="#"><u>n</u></a></a> (12) 3456-7890</span>
+        <span><a href="#"><u>c</u></a></span>
+        <span><a href="#"><u>f</u></a></span>
+        <span><a href="#"><u>i</u></a></span>
+        <span><a href="#"><u>t</u></a></span>
+    </footer>
+    
+    <script src="js/login-cadastro.js"></script>
+</body>
+</html>
